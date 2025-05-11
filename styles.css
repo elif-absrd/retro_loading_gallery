@@ -1,0 +1,298 @@
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('https://fonts.cdnfonts.com/s/14897/VCR_OSD_Mono.woff') format('woff');
+}
+@font-face {
+  font-family: 'Pixel LCD7';
+  src: url('https://fonts.cdnfonts.com/s/15145/Pixel_LCD7.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arcade Classic';
+  src: url('https://fonts.cdnfonts.com/s/15007/ArcadeClassic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Joystix';
+  src: url('https://fonts.cdnfonts.com/s/15006/Joystix.woff') format('woff');
+}
+@font-face {
+  font-family: 'Fixedsys Excelsior';
+  src: url('https://fonts.cdnfonts.com/s/15008/FixedsysExcelsior.woff') format('woff');
+}
+@font-face {
+  font-family: 'OCR-A';
+  src: url('https://fonts.cdnfonts.com/s/15009/OCR-A.woff') format('woff');
+}
+@font-face {
+  font-family: 'Perfect DOS VGA 437';
+  src: url('https://fonts.cdnfonts.com/s/15010/Perfect_DOS_VGA_437.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  cursor: url('https://cur.cursors-4u.net/games/gam-4/gam337.cur'), auto;
+}
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1.5em, 5vw, 2em);
+  text-align: center;
+  margin: 20px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+.museum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.loading-screen {
+  background: #111 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAyCAYAAACrO1Z3AAAAAXNSR0IArs4c6QAAAB5JREFUCB1jZGBgYGBhYWFgYGBgYGBgYGBgYGBgAABJZAABqC5Y3QAAAABJRU5ErkJggg==') repeat;
+  border: 4px solid #333;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+.loading-screen:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.loading-screen h2 {
+  font-size: 1em;
+  text-align: center;
+  margin: 10px;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+/* DOS Loading Screen */
+.dos {
+  font-family: 'VCR OSD Mono', monospace;
+}
+.dos .loading-bar {
+  width: 80%;
+  height: 20px;
+  background: #000;
+  border: 2px solid #fff;
+  margin: 20px auto;
+  position: relative;
+}
+.dos .loading-bar::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #0f0;
+  animation: load 3s linear infinite;
+}
+.dos .text {
+  text-align: center;
+  font-size: 0.8em;
+  color: #0f0;
+  animation: blink 1s step-end infinite;
+}
+/* Windows 95 Loading Screen */
+.win95 {
+  font-family: 'Pixel LCD7', monospace;
+}
+.win95 .spinner {
+  width: 40px;
+  height: 40px;
+  margin: 50px auto;
+  border: 5px solid #ccc;
+  border-top-color: #00f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.win95 .text {
+  text-align: center;
+  font-size: 0.8em;
+  color: #fff;
+  text-shadow: 0 0 5px #00f;
+}
+/* Arcade Loading Screen */
+.arcade {
+  font-family: 'Arcade Classic', monospace;
+}
+.arcade .loading-bar {
+  width: 80%;
+  height: 30px;
+  background: #222;
+  border: 3px solid #f00;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+.arcade .loading-bar::after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0, #f00);
+  animation: slide 2s linear infinite;
+}
+.arcade .text {
+  text-align: center;
+  font-size: 0.9em;
+  color: #ff0;
+  text-shadow: 0 0 10px #f00;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+/* PlayStation 1 Loading Screen */
+.ps1 {
+  font-family: 'Joystix', monospace;
+}
+.ps1 .logo {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background: linear-gradient(45deg, #f00, #00f);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: rotate 4s linear infinite;
+}
+.ps1 .text {
+  text-align: center;
+  font-size: 0.8em;
+  color: #fff;
+  text-shadow: 0 0 8px #f0f;
+}
+/* Dial-Up Internet Loading Screen */
+.dialup {
+  font-family: 'Fixedsys Excelsior', monospace;
+}
+.dialup .dots {
+  text-align: center;
+  font-size: 1.2em;
+  color: #0ff;
+  margin: 50px auto;
+  animation: dots 1.5s steps(4, end) infinite;
+}
+.dialup .text {
+  text-align: center;
+  font-size: 0.7em;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+/* Amiga Workbench Loading Screen */
+.amiga {
+  font-family: 'OCR-A', monospace;
+}
+.amiga .floppy {
+  width: 60px;
+  height: 60px;
+  margin: 40px auto;
+  background: #ccc;
+  position: relative;
+  animation: insert 2s ease-in-out infinite;
+}
+.amiga .floppy::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  top: 10px;
+  left: 10px;
+}
+.amiga .text {
+  text-align: center;
+  font-size: 0.8em;
+  color: #fff;
+  text-shadow: 0 0 5px #f00;
+  animation: blink 0.5s step-end infinite;
+}
+/* Game Boy Advance Loading Screen */
+.gba {
+  font-family: 'Perfect DOS VGA 437', monospace;
+}
+.gba .logo {
+  width: 80px;
+  height: 40px;
+  margin: 30px auto;
+  background: #fff;
+  position: relative;
+  animation: fade 2s ease-in-out infinite;
+}
+.gba .logo::before {
+  content: 'GBA';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gba .progress {
+  width: 80%;
+  height: 15px;
+  background: #333;
+  border: 2px solid #fff;
+  margin: 20px auto;
+  position: relative;
+}
+.gba .progress::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #a00;
+  animation: load 2.5s linear infinite;
+}
+.gba .text {
+  text-align: center;
+  font-size: 0.7em;
+  color: #fff;
+  text-shadow: 0 0 5px #a00;
+  animation: pulse 1s ease-in-out infinite;
+}
+/* Animations */
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+@keyframes slide {
+  0% { left: -20%; }
+  100% { left: 100%; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+@keyframes dots {
+  0% { content: '.'; }
+  25% { content: '..'; }
+  50% { content: '...'; }
+  75% { content: '....'; }
+}
+@keyframes insert {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@media (max-width: 600px) {
+  .loading-screen {
+    max-width: 100%;
+  }
+}
