@@ -4,52 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retro Loading Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
   <h1>Retro Loading Gallery</h1>
   <div class="museum">
-    <div class="loading-screen dos" id="dos" role="region" aria-label="DOS Game Loading Screen">
-      <h2>DOS Game (1990s)</h2>
-      <div class="loading-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-      <div class="text">LOADING... PLEASE WAIT</div>
-    </div>
-    <div class="loading-screen win95" id="win95" role="region" aria-label="Windows 95 App Loading Screen">
-      <h2>Windows 95 App</h2>
-      <div class="spinner" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-      <div class="text">Initializing...</div>
-    </div>
-    <div class="loading-screen arcade" id="arcade" role="region" aria-label="Arcade Game Loading Screen">
-      <h2>Arcade Game (1980s)</h2>
-      <div class="loading-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-      <div class="text">GET READY!</div>
-    </div>
-    <div class="loading-screen ps1" id="ps1" role="region" aria-label="PlayStation 1 Loading Screen">
-      <h2>PlayStation 1 (1990s)</h2>
-      <div class="logo" role="img" aria-label="PlayStation 1 logo"></div>
-      <div class="text">Booting Up...</div>
-    </div>
-    <div class="loading-screen dialup" id="dialup" role="region" aria-label="Dial-Up Internet Loading Screen">
-      <h2>Dial-Up Internet (1990s)</h2>
-      <div class="dots" role="status">...</div>
-      <div class="text">Connecting to Server</div>
-    </div>
-    <div class="loading-screen amiga" id="amiga" role="region" aria-label="Amiga Workbench Loading Screen">
-      <h2>Amiga Workbench (1980s)</h2>
-      <div class="floppy" role="img" aria-label="Floppy disk"></div>
-      <div class="text">Insert Disk...</div>
-    </div>
-    <div class="loading-screen gba" id="gba" role="region" aria-label="Game Boy Advance Loading Screen">
-      <h2>Game Boy Advance (2000s)</h2>
-      <div class="logo" role="img" aria-label="Game Boy Advance logo"></div>
-      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-      <div class="text">Starting Game...</div>
-    </div>
     <div class="loading-screen c64">
       <h2>Commodore 64 (1980s)</h2>
       <div class="stripes"></div>
-      <p class="text">LOADING... READY.</p>
+      <p class="text">FOUND GAME<span class="cursor"></span></p>
+      <div class="border-flash"></div>
+    </div>
+
+    <div class="loading-screen dos">
+      <h2>DOS Game (1990s)</h2>
+      <div class="loading-bar"></div>
+      <p class="text">LOADING... PLEASE WAIT</p>
+    </div>
+
+    <div class="loading-screen win95">
+      <h2>Windows 95 App</h2>
+      <div class="spinner"></div>
+      <p class="text">Initializing...</p>
+    </div>
+
+    <div class="loading-screen arcade">
+      <h2>Arcade Game (1980s)</h2>
+      <div class="loading-bar"></div>
+      <p class="text">GET READY!</p>
+    </div>
+
+    <div class="loading-screen ps1">
+      <h2>PlayStation 1 (1990s)</h2>
+      <div class="logo"></div>
+      <p class="text">Booting Up...</p>
+    </div>
+
+    <div class="loading-screen dialup">
+      <h2>Dial-Up Internet (1990s)</h2>
+      <div class="dots"></div>
+      <p class="text">Connecting to Server</p>
+    </div>
+
+    <div class="loading-screen amiga">
+      <h2>Amiga Workbench (1980s)</h2>
+      <div class="floppy"></div>
+      <p class="text">Insert Disk...</p>
+    </div>
+
+    <div class="loading-screen gba">
+      <h2>Game Boy Advance (2000s)</h2>
+      <div class="logo"></div>
+      <div class="progress"></div>
+      <p class="text">Starting Game...</p>
+    </div>
+
+    <div class="loading-screen zxspectrum">
+      <h2>ZX Spectrum (1980s)</h2>
+      <div class="stripes"></div>
+      <p class="text">LOAD ""<span class="cursor"></span></p>
     </div>
   </div>
 </body>
